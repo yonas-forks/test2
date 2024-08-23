@@ -1,15 +1,2 @@
-[package]
-name = "test2"
-version = "0.1.0"
-authors = ["test@example.com"]
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[features]
-coverage = []
-
 [workspace]
 members = ["backpack", "xtask"]
-
-[dependencies]
