@@ -44,8 +44,9 @@ jobs:
 
       - name: treefmt
         run: |
-          sudo apt install xh
-          xh -F -o treefmt.tgz https://github.com/numtide/treefmt/releases/download/$(xh --body https://api.github.com/repos/numtide/treefmt/tags | jq -r '.[0].name')/treefmt_$(xh --body https://api.github.com/repos/numtide/treefmt/tags | jq -r '.[0].name' | cut -d'v' -f2)_linux_amd64.tar.gz
+          sudo apt install wget curl gojq
+          curl -s https://api.github.com/repos/numtide/treefmt/tags | gojq -r '.[0].name' > .ver
+          wget -O treefmt.tgz https://github.com/numtide/treefmt/releases/download/$(cat .ver)/treefmt_$(cat .ver | cut -d'v' -f2)_linux_amd64.tar.gz
           tar -xvf treefmt.tgz
           ./treefmt
 
