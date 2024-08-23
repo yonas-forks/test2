@@ -1,6 +1,6 @@
 # Rust CI with GitHub Actions
 
-![example workflow](https://github.com/BamPeers/rust-ci-github-actions-workflow/actions/workflows/check-and-lint.yaml/badge.svg) ![example workflow](https://github.com/BamPeers/rust-ci-github-actions-workflow/actions/workflows/test.yaml/badge.svg) [![codecov](https://codecov.io/gh/BamPeers/rust-ci-github-actions-workflow/branch/main/graph/badge.svg?token=SLIHSUWHT2)](https://codecov.io/gh/BamPeers/rust-ci-github-actions-workflow)
+![example workflow](https://github.com/yonas-forks/test2/actions/workflows/check-and-lint.yaml/badge.svg) ![example workflow](https://github.com/yonas-forks/test2/actions/workflows/test.yaml/badge.svg) [![codecov](https://codecov.io/gh/yonas-forks/test2/branch/main/graph/badge.svg?token=SLIHSUWHT2)](https://codecov.io/gh/yonas-forks/test2)
 
 
 ## Table of Contents
