@@ -82,8 +82,8 @@ jobs:
       - name: Run xtask coverage
         uses: actions-rs/cargo@v1
         with:
-          command: cargo
-          args: xtask coverage
+          command: xtask
+          args: coverage
 
       - name: Upload to codecov.io
         uses: codecov/codecov-action@v4
