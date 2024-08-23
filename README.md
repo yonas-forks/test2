@@ -1,6 +1,6 @@
 # Rust CI with GitHub Actions
 
-![check and lint workflow](https://github.com/yonas-forks/test2/actions/workflows/check-and-lint.yaml/badge.svg) ![testing workflow](https://github.com/yonas-forks/test2/actions/workflows/test.yaml/badge.svg) ![packaging](https://github.com/yonas-forks/test2/actions/workflows/release-packaging.yaml/badge.svg) ![coverage](https://github.com/yonas-forks/test2/actions/workflows/coverage.yaml/badge.svg)   [![codecov](https://codecov.io/gh/yonas-forks/test2/branch/main/graph/badge.svg?token=SLIHSUWHT2)](https://codecov.io/gh/yonas-forks/test2)
+![Linting workflow](https://github.com/yonas-forks/test2/actions/workflows/lint.yaml/badge.svg) ![testing workflow](https://github.com/yonas-forks/test2/actions/workflows/test.yaml/badge.svg) ![packaging](https://github.com/yonas-forks/test2/actions/workflows/release-packaging.yaml/badge.svg) ![coverage](https://github.com/yonas-forks/test2/actions/workflows/coverage.yaml/badge.svg)   [![codecov](https://codecov.io/gh/yonas-forks/test2/branch/main/graph/badge.svg?token=SLIHSUWHT2)](https://codecov.io/gh/yonas-forks/test2)
 
 
 ## Table of Contents
