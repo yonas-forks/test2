@@ -80,7 +80,6 @@ jobs:
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Run xtask coverage
-        uses: actions-rs/cargo@v1
         run: |
           cargo install xtask
           cargo xtask coverage
