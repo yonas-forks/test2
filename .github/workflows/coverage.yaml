@@ -57,7 +57,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        rust: [stable]
+        rust: [stable,nightly]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout sources
@@ -80,10 +80,9 @@ jobs:
 
       - name: Run xtask coverage
         uses: actions-rs/cargo@v1
-        with:
-          command: xtask
-          args: coverage
-          
+        run: |
+          cargo install xtask
+          cargo xtask coverage
 
       - name: Upload to codecov.io
         uses: codecov/codecov-action@v4
