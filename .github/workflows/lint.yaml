@@ -5,7 +5,7 @@ on:
       - main
 
 
-name: Check and Lint
+name: Linting
 
 jobs:
   check:
