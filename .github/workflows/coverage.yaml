@@ -80,9 +80,10 @@ jobs:
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Run xtask coverage
-        run: |
-          cargo install xtask
-          cargo xtask coverage
+        uses: actions-rs/cargo@v1
+        with:
+          command: xtask
+          args: coverage
 
       - name: Upload to codecov.io
         uses: codecov/codecov-action@v4
