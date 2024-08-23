@@ -8,6 +8,7 @@ edition = "2021"
 
 [[bin]]
 name = "test2"
+path = "src/main.rs"
 
 [features]
 coverage = []
