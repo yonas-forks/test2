@@ -9,4 +9,7 @@ edition = "2021"
 [features]
 coverage = []
 
+[workspace]
+members = ["backpack", "xtask"]
+
 [dependencies]
