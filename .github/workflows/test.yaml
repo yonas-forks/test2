@@ -35,9 +35,18 @@ jobs:
             ~/.cargo/registry/cache
             target
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('Cargo.lock') }}
+
+      - name: Download grcov
+        run: |
+          sudo apt install gojq
+          mkdir -p "${HOME}/.local/bin"
+          curl -s https://api.github.com/repos/mozilla/grcov/tags | gojq -r '.[0].name' > .ver
+          curl -sL https://github.com/mozilla/grcov/releases/download/$(cat .ver)/grcov-x86_64-unknown-linux-gnu.tar.bz2 | tar jxf - -C "${HOME}/.local/bin"
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
       - name: Generate test result and coverage report
         run: |
-          cargo install cargo2junit grcov;
+          cargo install cargo2junit;
           cargo test $CARGO_OPTIONS -- -Z unstable-options --format json | cargo2junit > results.xml;
           zip -0 ccov.zip `find . \( -name "$PROJECT_NAME_UNDERSCORE*.gc*" \) -print`;
           grcov ccov.zip -s . -t lcov --llvm --ignore-not-existing --ignore "/*" --ignore "tests/*" -o lcov.info;
