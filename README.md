@@ -15,7 +15,7 @@
 ## Workflows
 The CI process is separated into 3 workflows: Check and Lint, Test, and Release Packaging.
 
-All jobs run on `ubuntu-latest`, and are run in parallel.
+All jobs run on `ubuntu-latest` and are run in parallel.
 
 All jobs use [actions/checkout](https://github.com/actions/checkout) and [actions-rs/toolchain](https://github.com/actions-rs/toolchain).
 
